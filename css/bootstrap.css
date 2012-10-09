@@ -824,4 +824,5 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
-.margin-top{margin-top:20%;}
+.margin-top-20{margin-top:20px;}
+.margin-top-60{margin-top:60px;}
