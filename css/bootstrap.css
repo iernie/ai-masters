@@ -112,8 +112,8 @@ cite{font-style:normal;}
 .text-info{color:#3a87ad;}
 .text-success{color:#468847;}
 h1,h2,h3,h4,h5,h6{margin:10px 0;font-family:inherit;font-weight:bold;line-height:1;color:inherit;text-rendering:optimizelegibility;}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight:normal;line-height:1;color:#999999;}
-h1{font-size:72px;line-height:40px;text-shadow:2px 2px 0 rgba(0, 0, 0, 0.5);}
-h2{font-size:30px;line-height:40px;}
+h1{font-size:72px;line-height:40px;text-shadow:1px 1px 0 #0a3058;color:#12569d;}
+h2{font-size:26px;line-height:40px;}
 h3{font-size:24px;line-height:40px;}
 h4{font-size:18px;line-height:20px;}
 h5{font-size:14px;line-height:20px;}
@@ -824,4 +824,4 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
-.vertical-center{margin-top:30%;}
+.margin-top{margin-top:20%;}
