@@ -824,5 +824,8 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
-body{padding-top:60px;background:url("../img/background.png") repeat fixed;}
-.brand{color:#12569d !important;text-shadow:1px 1px 0 #000000 !important;}
+body{padding:40px 0;background:url("../img/background.png") repeat fixed;}
+.brand{color:#12569d !important;text-shadow:1px 1px 0 #000000 !important;font-size:4em;}
+.row{margin-top:40px;}
+#resources h3,#resources p{margin-left:80px;}
+#resources ul{margin-left:100px;}
