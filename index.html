@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>AI masters</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
 
         <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -16,53 +16,85 @@
             })();
         </script>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="brand">AI masters</div>
+                    <ul class="nav">
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#calendar">Calendar</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#contribute">Contribute</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="container">
-            <div class="row">
-                <h1>AI masters</h1>
-                <small>The website for the AI masters students at NTNU 2012-2013</small>
-                <div class="row margin-top-20">
-                    <div class="span8">
+            <div id="intro" class="row">
+                <div class="span12">
+                    <h1>Welcome</h1>
+                    <p>
+                        This is the webpage for AI master students at NTNU 2012-2013. This site will contain useful information and resources, free to use by the students. The content on the site is a community effort. I will try to hold it as up-to-date as possible, and update it with more stuff, but if you feel you want something on the site, or wish to share something that might be useful to others, see the contribute section on how to contribute to the site.
+                    </p>
+                    <p>
+                        <small><em>Last updated: 2012-10-19</em></small>
+                    </p>
+                </div>
+            </div>
+            <div id="calendar" class="row">
+                <div class="span12">
 
-                        <h2>What's happening?</h2>
-                        <dl class="dl-horizontal">
-                            <dt class="muted">14/09/2012</dt>
-                            <dd class="muted">Course</dd>
+                    <h1>Calendar</h1>
+                    <dl class="dl-horizontal">
+                        <dt class="muted">14/09/2012</dt>
+                        <dd class="muted">Course</dd>
 
-                            <dt class="muted">28/09/2012</dt>
-                            <dd class="muted">Course</dd>
+                        <dt class="muted">28/09/2012</dt>
+                        <dd class="muted">Course</dd>
 
-                            <dt class="muted">11/10/2012</dt>
-                            <dd class="muted">Note! Course has been moved to the 19th!</dd>
+                        <dt class="muted">11/10/2012</dt>
+                        <dd class="muted">Note! Course has been moved to the 19th!</dd>
 
-                            <dt>19/10/2012</dt>
-                            <dd class="text-info">Course (that should have been on the 11th)</dd>
+                        <dt class="muted">19/10/2012</dt>
+                        <dd class="muted">Course (that should have been on the 11th)</dd>
 
-                            <dt>26/10/2012</dt>
-                            <dd>Course</dd>
-                        </dl>
-
-                        <h2 class="margin-top-60">How to submit to this page</h2>
-                        <ol>
-                            <li><a href="https://github.com/iernie/ai-masters/fork_select">Fork</a> this site on <a href="https://github.com/iernie/ai-masters">GitHub</a> and send me a pull request.</li>
-                            <li>Send me an email at afiouni<span class="hide">Robot food</span>@stud.ntnu.no. (But I prefer the first option.)</li>
-                        </ol>
-
-                        <p class="margin-top-60">
-                            <small><em>Last updated: 2012-10-17</em></small>
-                        </p>
-                    </div>
-                    <div class="span4">
-                        <h3>Links</h3>
+                        <dt>26/10/2012</dt>
+                        <dd>Course</dd>
+                    </dl>
+                </div>
+            </div>
+            <div id="resources" class="row">
+                <div class="span12">
+                    <h1>Resources</h1>
+                    <h3>Files</h3>
+                        <p>Note that files can be updated.</p>
                         <ul>
-                            <li><a href="http://www.ntnu.no"</a>NTNU</a></li>
+                            <li><a href="files/Intro-til-kurs.pdf">Intro til kurs (PDF)</a></li>
+                            <li><a href="files/SLR_HowTo.pdf">How to do a Structured Literature Review in computer science (PDF)</a></li>
+                            <li><a href="files/template_2012.pdf">Report template (PDF)</a></li>
+                            <li><a href="files/template_2012.tex">Report template (LaTeX)</a></li>
                         </ul>
-                    </div>
+                    <h3>Links</h3>
+                        <ul>
+                            <li><a href="http://www.ntnu.no/">NTNU</a></li>
+                        </ul>
+                </div>
+            </div>
+            <div id="contribute" class="row">
+                <div class="span12">
+                    <h2>Contribute</h2>
+                    <p>If you want to contribute in any way to this page, you have the following options:</p>
+                    <ol>
+                        <li><a href="https://github.com/iernie/ai-masters/fork_select">Fork</a> this site on <a href="https://github.com/iernie/ai-masters">GitHub</a> and send me a pull request. (If you know what you're doing.)</li>
+                        <li>Send me an email at afiouni<span class="hide">Robot food</span>@stud.ntnu.no. (But I prefer the first option.)</li>
+                    </ol>
                 </div>
             </div>
         </div>
         
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="components/jquery/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
