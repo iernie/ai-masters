@@ -8,6 +8,9 @@
 
 // Custom styles
 
+::-moz-selection{ background: @ntnuBlue; color:#fff; text-shadow: none; }
+::selection { background: @ntnuBlue; color:#fff; text-shadow: none; }
+
 body {
     padding: 40px 0;
     background: url("../img/background.png") repeat fixed;
@@ -15,22 +18,29 @@ body {
 
 .brand {
     color: @ntnuBlue !important;
-    text-shadow: 1px 1px 0 darken(@ntnuBlue, 50%) !important;
-    font-size: 4em;
+    text-shadow: 0px 2px 0 darken(@ntnuBlue, 25%) !important;
+    font-size: 5em;
 }
 
-.row {
-	margin-top: 40px;
+.row div {
+
+    blockquote {
+        border-color: lighten(@ntnuBlue,50%);
+    }
+
+    padding-top: 40px;
+
+    h2 {
+        margin-top: 40px;
+    }
+
+    p,
+    h3 {
+        margin-left: 80px;
+    }
+
+    ol,
+    ul {
+        margin-left: 100px;
+    }
 }
-
-#resources {
-	h3,
-	p {
-		margin-left: 80px;
-	}
-
-	ul {
-		margin-left: 100px;
-	}
-}
-
