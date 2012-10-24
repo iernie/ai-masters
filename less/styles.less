@@ -13,7 +13,7 @@
 
 body {
     padding: 40px 0;
-    background: url("../img/background.png") repeat fixed;
+    background: url("../img/background.png") repeat;
 }
 
 .brand {
@@ -25,7 +25,7 @@ body {
 .row div {
 
     blockquote {
-        border-color: lighten(@ntnuBlue,50%);
+        border-color: fade(lighten(@ntnuBlue,50%), 90%);
     }
 
     padding-top: 40px;
@@ -35,12 +35,22 @@ body {
     }
 
     p,
-    h3 {
+    h3,
+    table {
         margin-left: 80px;
     }
 
     ol,
-    ul {
+    ul{
         margin-left: 100px;
     }
+
+    table {
+        width: 860px;
+    }
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background: fade(lighten(@ntnuBlue, 50%), 50%);
 }

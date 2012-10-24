@@ -826,9 +826,11 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .affix{position:fixed;}
 ::-moz-selection{background:#12569d;color:#fff;text-shadow:none;}
 ::selection{background:#12569d;color:#fff;text-shadow:none;}
-body{padding:40px 0;background:url("../img/background.png") repeat fixed;}
+body{padding:40px 0;background:url("../img/background.png") repeat;}
 .brand{color:#12569d !important;text-shadow:0px 2px 0 #05172b !important;font-size:5em;}
-.row div{padding-top:40px;}.row div blockquote{border-color:#b7d6f7;}
+.row div{padding-top:40px;}.row div blockquote{border-color:rgba(183, 214, 247, 0.9);}
 .row div h2{margin-top:40px;}
-.row div p,.row div h3{margin-left:80px;}
+.row div p,.row div h3,.row div table{margin-left:80px;}
 .row div ol,.row div ul{margin-left:100px;}
+.row div table{width:860px;}
+.table-hover tbody tr:hover td,.table-hover tbody tr:hover th{background:rgba(183, 214, 247, 0.5);}
