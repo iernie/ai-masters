@@ -988,14 +988,14 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .affix{position:fixed;}
 ::-moz-selection{background:#12569d;color:#fff;text-shadow:none;}
 ::selection{background:#12569d;color:#fff;text-shadow:none;}
-body{padding:40px 20px;background:url("../img/background.png") repeat;font-family:"BloklettersBalpen";}
-.brand{font-size:7em;font-family:'SketchGothic-Bold';font-weight:normal;}
+body{padding:40px 0;background:url("../img/background.png") repeat;font-family:"BloklettersBalpen";}
+.brand{font-size:7em;font-family:'SketchGothic-Bold';font-weight:normal;margin-top:40px;line-height:0.7em;}
 .row div{padding-top:40px;}.row div .lead{margin-left:0;}
 .row div small{float:right;}
 .row div h2{margin-top:40px;}
 .row div p,.row div h3,.row div table{margin-left:10px;}
 .row div ol,.row div ul{margin-left:30px;}
-.row div table{width:860px;}
+.table-striped tbody tr:nth-child(odd) td,.table-striped tbody tr:nth-child(odd) th{background-color:rgba(85, 85, 85, 0.1);}
 .table-hover tbody tr:hover td,.table-hover tbody tr:hover th{background:rgba(18, 86, 157, 0.5);color:#ffffff;}
 .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}

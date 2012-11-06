@@ -31,7 +31,7 @@
 ::selection { background: @ntnuBlue; color:#fff; text-shadow: none; }
 
 body {
-    padding: 40px 20px;
+    padding: 40px 0;
     background: url("../img/background.png") repeat;
     font-family: "BloklettersBalpen";
 }
@@ -40,6 +40,8 @@ body {
     font-size: 7em;
     font-family: 'SketchGothic-Bold';
     font-weight: normal;
+    margin-top: 40px;
+    line-height: 0.7em;
 }
 
 .row div {
@@ -68,10 +70,11 @@ body {
     ul{
         margin-left: 30px;
     }
+}
 
-    table {
-        width: 860px;
-    }
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+    background-color: fade(@gray, 10%);
 }
 
 .table-hover tbody tr:hover td,
