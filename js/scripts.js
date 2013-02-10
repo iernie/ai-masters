@@ -5,7 +5,6 @@ function get_projects() {
         data: { "action": "get" }
     }).always(function( msg ) {
         console.log("got", msg);
-        $("#projects").html("hello");
     });
 
 }
