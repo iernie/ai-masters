@@ -28,7 +28,7 @@ function add_project() {
 $(document).ready(function(){
     get_projects();
 
-    $("#addProject").click(function(e) {
+    $("#addProject").on("click", function(e) {
         e.preventDefault();
         add_project();
     });
