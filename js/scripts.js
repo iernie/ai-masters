@@ -1,11 +1,10 @@
 function get_projects() {
     $.ajax({
-    type: "POST",
+        type: "POST",
         url: "database.php",
-        data: "action=get",
-        success: function(msg){
-            alert(msg);
-        }
+        data: { action: "get" }
+    }).done(function( msg ) {
+        alert( "Data Saved: " + msg );
     });
 }
 
@@ -15,13 +14,12 @@ function add_project() {
     var description = $("#description").val();
 
     $.ajax({
-    type: "POST",
+        type: "POST",
         url: "database.php",
-        data: "action=add&name=" + name + "&participants=" + participants + "&description=" + description,
-        success: function(msg){
-            alert(msg);
-            get_projects();
-        }
+        data: { action: "add", name: name, participants: participants, description: description }
+    }).done(function( msg ) {
+        alert( "Data Saved: " + msg );
+        get_projects();
     });
 }
 
