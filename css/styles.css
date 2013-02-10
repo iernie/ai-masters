@@ -18,7 +18,7 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 textarea{overflow:auto;vertical-align:top;}
 .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
-.hide-text{font:a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
 .input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#333333;background-color:#ffffff;}
 a{color:#0088cc;text-decoration:none;}
@@ -990,16 +990,16 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 ::selection{background:#12569d;color:#fff;text-shadow:none;}
 body{padding:40px 0;background:url("../img/background.png") repeat;font-family:"BloklettersBalpen";}
 .brand{font-size:7em;font-family:'SketchGothic-Bold';font-weight:normal;margin-top:40px;line-height:0.7em;text-transform:uppercase;}
-.row div{padding-top:40px;}.row div .lead{margin-left:0;}
-.row div small{float:right;}
-.row div h2{margin-top:40px;}
-.row div p,.row div h3,.row div table{margin-left:10px;}
-.row div ol,.row div ul{margin-left:30px;}
+.row .span12{padding-top:40px;}.row .span12 .lead{margin-left:0;}
+.row .span12 small{float:right;}
+.row .span12 h2{margin-top:40px;}
+.row .span12 p,.row .span12 h3,.row .span12 table,.row .span12 legend{margin-left:10px;}
+.row .span12 ol,.row .span12 ul{margin-left:30px;}
 .table-striped tbody tr:nth-child(odd) td,.table-striped tbody tr:nth-child(odd) th{background-color:rgba(85, 85, 85, 0.15);}
 .table-hover tbody tr:hover td,.table-hover tbody tr:hover th{background:rgba(18, 86, 157, 0.5);color:#ffffff;}
 .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
-.hide-text{font:a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
 .input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 .hidden{display:none;visibility:hidden;}
 .visible-phone{display:none !important;}

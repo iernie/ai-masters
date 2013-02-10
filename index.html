@@ -35,15 +35,7 @@
                             <tr><th class="span3">Date</th><th>Description</th></tr>
                         </thead>
                         <tbody>
-                            <tr class="muted"><td>14/09/2012</td><td>Introduction &amp; Structured Litterature Review</td></tr>
-                            <tr class="muted"><td>28/09/2012</td><td>Report writing</td></tr>
-                            <tr class="muted"><td>11/10/2012</td><td>NB! Moved to the 19th</td></tr>
-                            <tr class="muted"><td>19/10/2012</td><td>Guest Lecture with Yahoo!</td></tr>
-                            <tr class="muted"><td>26/10/2012</td><td>Research methods</td></tr>
-                            <tr class="muted"><td>09/11/2012</td><td>How to write scientific papers</td></tr>
-                            <tr class="muted"><td>23/11/2012</td><td>Guest lecture (presenter to be announced)</td></tr>
-                            <tr class="muted"><td>30/11/2012</td><td>Commercialisation of projects</td></tr>
-                            <tr><td>14/12/2012</td><td>End term party</td></tr>
+                            <tr><td>14/01/2013</td><td>Ready, steady, GO!</td></tr>
                         </tbody>
                     </table>
 
@@ -53,7 +45,6 @@
                                 <tr><th class="span3">Date</th><th>Description</th></tr>
                             </thead>
                             <tbody>
-                                <tr><td>12/12/2012</td><td>Specialization project</td></tr>
                                 <tr><td>01/06/2013</td><td>Master thesis (AI-informatikk)</td></tr>
                                 <tr><td>20/06/2013</td><td>Master thesis (AI-datateknikk)</td></tr>
                             </tbody>
@@ -75,8 +66,34 @@
                         <li><a href="http://a-ai.no/">GEMINI centre for Applied Artificial Intelligence</a></li>
                     </ul>
 
-                    <h2>Students</h2>
-                        <p>Coming soon...</p>
+                    <h2>Projects</h2>
+                        <div class="projects">Replace me</div>
+                        <form id="addProject" class="form-horizontal">
+                            <legend>Add project</legend>
+                            <div class="control-group">
+                                <label class="control-label" for="projectName">Project Name</label>
+                                <div class="controls">
+                                    <input type="text" id="projectName" placeholder="A really cool project">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="participants">Participants</label>
+                                <div class="controls">
+                                    <input type="text" id="participants" placeholder="John Doe, Jane Austin">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">Short description</label>
+                                <div class="controls">
+                                    <textarea rows="3" id="description" placeholder="Lorem ipsum dolor sit amet&hellip;"></textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <button type="submit" class="btn">Add project</button>
+                                </div>
+                            </div>
+                        </form>
 
                     <h2>Contribute</h2>
                     <p>If you want to contribute in any way to this page, you have the following options:</p>
@@ -90,6 +107,6 @@
         
         <script src="components/jquery/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <!--<script src="js/scripts.min.js"></script>-->
+        <script src="js/scripts.min.js"></script>
     </body>
 </html>
