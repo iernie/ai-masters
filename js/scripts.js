@@ -1,25 +1,24 @@
 function get_projects() {
     $.ajax({
         type: "POST",
-        url: "database.php",
+        url: "php/database.php",
         data: { "action": "get" }
-    }).always(function( msg ) {
-        console.log("got", msg);
+    }).done(function( msg ) {
+        $("#projects").html(msg);
     });
 
 }
 
 function add_project() {
-    var inputname = $("#projectName").val();
-    var inputparticipants = $("#participants").val();
-    var inputdescription = $("#description").val();
+    var name = $("#projectName").val();
+    var participants = $("#participants").val();
+    var description = $("#description").val();
 
     $.ajax({
         type: "POST",
-        url: "database.php",
-        data: { action: "add", name: inputname, participants: inputparticipants, description: inputdescription }
-    }).always(function( msg ) {
-        console.log("added", msg);
+        url: "php/database.php",
+        data: { "action": "add", "name": name, "participants": participants, "description": description }
+    }).always(function( ) {
         get_projects();
     });
 }

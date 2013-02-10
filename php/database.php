@@ -1,16 +1,15 @@
 <?php
 
     try {
-        $db = new PDO('sqlite:projects.db');
-        $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-        $db->exec("CREATE TABLE IF NOT EXISTS projects (
+        $dbh = new PDO('sqlite:../projects.sqlite');
+        $dbh->exec("CREATE TABLE IF NOT EXISTS projects (
                     id INTEGER PRIMARY KEY,
                     name TEXT,
                     participants TEXT,
                     description TEXT)");
+        $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     } catch(PDOException $e) {  
-        echo "I'm sorry, Dave. I'm afraid I can't do that.";  
-        file_put_contents('PDOErrors.txt', $e->getMessage(), FILE_APPEND);  
+        echo "I'm sorry, Dave. I'm afraid I can't do that: " . $e->getMessage();  
     }
 
     $action = $_POST['action'];
@@ -23,36 +22,36 @@
     }
 
     function add() {
-        init();
-        $insert = "INSERT INTO projects (name, participants, description) 
-                VALUES (:name, :participants, :description)";
-        
-        $stmt = $db->prepare($insert);
-     
-        $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':participants', $participants);
-        $stmt->bindParam(':description', $description);
+        global $dbh;
 
         $name = $_POST['name'];
         $participants = $_POST['participants'];
         $description = $_POST['description'];
 
-        $stmt->execute();
-        close_db();
-        return json_encode("get_return");
+        $stmt = $dbh->prepare("INSERT INTO projects (name, participants, description) VALUES (:pname, :ppart, :pdesc)");
+
+        $stmt->bindParam(':pname', $name, PDO::PARAM_STR);
+        $stmt->bindParam(':ppart', $participants, PDO::PARAM_STR);
+        $stmt->bindParam(':pdesc', $description, PDO::PARAM_STR);
+        try {
+            $stmt->execute(); 
+        } catch(PDOException $e) {
+            echo $e->getMessage();
+        }
+
+        echo json_encode(True);
     }
 
     function get() {
-        init();
-        $select = "SELECT * FROM projects";
+        global $dbh;
 
-        $stmt = $db->prepare($select);
+        $stmt = $dbh->prepare("SELECT * FROM projects");
+
         $stmt->execute();
 
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        close_db();
-        return json_encode("add_return");
+        echo json_encode($results);
     }
 
-    $db = null; 
+    $dbh = null; 
 ?>
