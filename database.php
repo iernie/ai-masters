@@ -2,24 +2,23 @@
 
 	$action = $_POST['action'];
 
-	init();
 	if($action == "add") {
 		add();
 	} elseif ($action == "get") {
 		get();
 	}
-	close_db();
 
 	function init() {
-		$db = new PDO('sqlite:projects.sqlite3');
+		$db = new PDO('sqlite:projects.db');
 		$db->exec("CREATE TABLE IF NOT EXISTS projects (
-                    id INTEGER PRIMARY KEY, 
-                    name TEXT, 
-                    participants TEXT, 
+                    id INTEGER PRIMARY KEY,
+                    name TEXT,
+                    participants TEXT,
                     description TEXT)");
 	}
 
 	function add() {
+		init();
 		$insert = "INSERT INTO projects (name, participants, description) 
                 VALUES (:name, :participants, :description)";
 	    
@@ -29,22 +28,25 @@
 	    $stmt->bindParam(':participants', $participants);
 	    $stmt->bindParam(':description', $description);
 
-		$title = $_POST['name'];
-		$message = $_POST['participants'];
-		$time = $_POST['description'];
+		$name = $_POST['name'];
+		$participants = $_POST['participants'];
+		$description = $_POST['description'];
 
 		$stmt->execute();
-		return json_encode(true);
+		close_db();
+		return json_encode("get_return");
 	}
 
 	function get() {
+		init();
 		$select = "SELECT * FROM projects";
 
 		$stmt = $db->prepare($select);
 		$stmt->execute();
 
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		return json_encode($results);
+		close_db();
+		return json_encode("add_return");
 	}
 
 	function close_db() {
