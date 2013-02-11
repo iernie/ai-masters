@@ -1,9 +1,10 @@
 function get_projects() {
     $.ajax({
         type: "POST",
-        url: "php/database.php",
+        url: "php/query.php",
         data: { "action": "get" }
-    }).done(function( msg ) {
+    }).always(function( msg ) {
+        console.log("got", msg)
         $("#projects").html(msg);
     });
 
@@ -16,9 +17,10 @@ function add_project() {
 
     $.ajax({
         type: "POST",
-        url: "php/database.php",
+        url: "php/query.php",
         data: { "action": "add", "name": name, "participants": participants, "description": description }
-    }).always(function( ) {
+    }).always(function( msg ) {
+        console.log("add", msg);
         get_projects();
     });
 }
